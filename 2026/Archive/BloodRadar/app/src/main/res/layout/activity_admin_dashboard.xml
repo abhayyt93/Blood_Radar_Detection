@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ===== HEADER ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#C62828"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="40dp"
+            android:paddingBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🛡️ Admin Panel"
+                        android:textColor="#FFCDD2"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tvAdminName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Welcome, Admin 👋"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="2dp"/>
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btnAdminMenu"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_more_vert"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    app:tint="#FFFFFF"
+                    android:contentDescription="Menu" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- ===== STATS ROW 1: Users ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="20dp">
+
+            <!-- Total Users -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="14dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="👥"
+                    android:textSize="22sp"/>
+                <TextView
+                    android:id="@+id/tvTotalUsers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="—"
+                    android:textColor="#C62828"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Users"
+                    android:textColor="#666666"
+                    android:textSize="11sp"/>
+            </LinearLayout>
+
+            <!-- Total Donors -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="14dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🩸"
+                    android:textSize="22sp"/>
+                <TextView
+                    android:id="@+id/tvTotalDonors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="—"
+                    android:textColor="#C62828"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Donors"
+                    android:textColor="#666666"
+                    android:textSize="11sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- ===== STATS ROW 2: Requests ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="12dp">
+
+            <!-- Active Requests -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📋"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/tvActiveRequests"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="—"
+                    android:textColor="#1565C0"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Active Reqs"
+                    android:textColor="#666666"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+            <!-- Critical Requests -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🚨"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/tvCriticalRequests"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="—"
+                    android:textColor="#E53935"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Critical"
+                    android:textColor="#666666"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+            <!-- Active Donations -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🏥"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/tvActiveDonations"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="—"
+                    android:textColor="#2E7D32"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Donations"
+                    android:textColor="#666666"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- ===== STATS ROW 3: Contact, Chats, Blocked ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="12dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:gravity="center">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🤝" android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/tvPendingContactReqs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="—"
+                    android:textColor="#F57C00"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Pending" android:textColor="#666666" android:textSize="10sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:gravity="center">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="⚠️" android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/tvReportedChats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="—"
+                    android:textColor="#6A1B9A"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Reports" android:textColor="#666666" android:textSize="10sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:gravity="center">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🚫" android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/tvBlockedUsers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="—"
+                    android:textColor="#424242"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Blocked" android:textColor="#666666" android:textSize="10sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ===== SECTION: MANAGE ===== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Manage"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="8dp"/>
+
+        <!-- Card: User Management -->
+        <LinearLayout
+            android:id="@+id/cardUsers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="10dp"
+            android:background="#FFFFFF"
+            android:elevation="2dp"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <TextView android:layout_width="40dp" android:layout_height="40dp"
+                android:text="👥" android:textSize="22sp" android:gravity="center"/>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical"
+                android:layout_marginStart="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="User Management" android:textColor="#222222"
+                    android:textSize="15sp" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="View, block, or delete users"
+                    android:textColor="#888888" android:textSize="12sp"/>
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="›" android:textSize="22sp" android:textColor="#C62828"/>
+        </LinearLayout>
+
+        <!-- Card: Blood Requests -->
+        <LinearLayout
+            android:id="@+id/cardRequests"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="10dp"
+            android:background="#FFFFFF"
+            android:elevation="2dp"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <TextView android:layout_width="40dp" android:layout_height="40dp"
+                android:text="🩸" android:textSize="22sp" android:gravity="center"/>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical"
+                android:layout_marginStart="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Blood Requests" android:textColor="#222222"
+                    android:textSize="15sp" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Manage all blood requests"
+                    android:textColor="#888888" android:textSize="12sp"/>
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="›" android:textSize="22sp" android:textColor="#C62828"/>
+        </LinearLayout>
+
+        <!-- Card: Donation Posts -->
+        <LinearLayout
+            android:id="@+id/cardDonations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="10dp"
+            android:background="#FFFFFF"
+            android:elevation="2dp"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <TextView android:layout_width="40dp" android:layout_height="40dp"
+                android:text="🏥" android:textSize="22sp" android:gravity="center"/>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical"
+                android:layout_marginStart="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Donation Posts" android:textColor="#222222"
+                    android:textSize="15sp" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Review and remove donation posts"
+                    android:textColor="#888888" android:textSize="12sp"/>
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="›" android:textSize="22sp" android:textColor="#C62828"/>
+        </LinearLayout>
+
+        <!-- Card: Contact Requests -->
+        <LinearLayout
+            android:id="@+id/cardContactRequests"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="10dp"
+            android:background="#FFFFFF"
+            android:elevation="2dp"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <TextView android:layout_width="40dp" android:layout_height="40dp"
+                android:text="🤝" android:textSize="22sp" android:gravity="center"/>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical"
+                android:layout_marginStart="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Contact Requests" android:textColor="#222222"
+                    android:textSize="15sp" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Monitor donor contact requests"
+                    android:textColor="#888888" android:textSize="12sp"/>
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="›" android:textSize="22sp" android:textColor="#C62828"/>
+        </LinearLayout>
+
+        <!-- Card: Reported Chats -->
+        <LinearLayout
+            android:id="@+id/cardChats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="10dp"
+            android:background="#FFFFFF"
+            android:elevation="2dp"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <TextView android:layout_width="40dp" android:layout_height="40dp"
+                android:text="💬" android:textSize="22sp" android:gravity="center"/>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical"
+                android:layout_marginStart="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Reported Chats" android:textColor="#222222"
+                    android:textSize="15sp" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Review flagged conversations"
+                    android:textColor="#888888" android:textSize="12sp"/>
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="›" android:textSize="22sp" android:textColor="#C62828"/>
+        </LinearLayout>
+
+        <!-- Card: Broadcast -->
+        <LinearLayout
+            android:id="@+id/cardBroadcast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="10dp"
+            android:background="#FFFFFF"
+            android:elevation="2dp"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <TextView android:layout_width="40dp" android:layout_height="40dp"
+                android:text="📢" android:textSize="22sp" android:gravity="center"/>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical"
+                android:layout_marginStart="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Broadcast Notification" android:textColor="#222222"
+                    android:textSize="15sp" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Send alerts to users / city / blood group"
+                    android:textColor="#888888" android:textSize="12sp"/>
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="›" android:textSize="22sp" android:textColor="#C62828"/>
+        </LinearLayout>
+
+        <!-- Card: Analytics -->
+        <LinearLayout
+            android:id="@+id/cardAnalytics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            android:background="#FFFFFF"
+            android:elevation="2dp"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <TextView android:layout_width="40dp" android:layout_height="40dp"
+                android:text="📈" android:textSize="22sp" android:gravity="center"/>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical"
+                android:layout_marginStart="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Analytics" android:textColor="#222222"
+                    android:textSize="15sp" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Blood group &amp; city distribution stats"
+                    android:textColor="#888888" android:textSize="12sp"/>
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="›" android:textSize="22sp" android:textColor="#C62828"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

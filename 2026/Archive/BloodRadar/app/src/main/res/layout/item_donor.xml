@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <!-- Blood Group Circle -->
+        <TextView
+            android:id="@+id/tvDonorBloodGroup"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/circle_background"
+            android:gravity="center"
+            android:text="A+"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/quicksand_bold"/>
+
+        <!-- Donor Info (phone hata diya) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp">
+
+            <TextView
+                android:id="@+id/tvDonorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Donor Name"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/quicksand_bold"/>
+
+            <TextView
+                android:id="@+id/tvDonorCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📍 City"
+                android:textSize="14sp"
+                android:textColor="@color/colorText"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/quicksand_regular"/>
+
+            <TextView
+                android:id="@+id/tvAvailability"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Available"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/quicksand_bold"/>
+
+        </LinearLayout>
+
+        <!-- Chat Button (phone/call icon ki jagah) -->
+        <TextView
+            android:id="@+id/btnDonorChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="💬 Chat"
+            android:textSize="13sp"
+            android:textColor="@color/colorPrimary"
+            android:background="@drawable/chat_button_bg"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/quicksand_bold"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

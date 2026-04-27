@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:elevation="2dp"
+    android:layout_marginBottom="10dp"
+    android:padding="14dp">
+
+    <TextView android:id="@+id/tvSenderReceiver"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="John → Doe"
+        android:textColor="#222222" android:textSize="14sp" android:textStyle="bold"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView android:id="@+id/tvChatMessage"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="&quot;Reported message...&quot;"
+        android:textColor="#555555" android:textSize="13sp"
+        android:background="#FFF8F8" android:padding="8dp"
+        android:layout_marginBottom="6dp"/>
+
+    <TextView android:id="@+id/tvReportReason"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Reason: Spam"
+        android:textColor="#E53935" android:textSize="12sp"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView android:id="@+id/btnClearReport"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="✅ Clear Report"
+        android:textColor="#FFFFFF" android:textSize="12sp"
+        android:background="@drawable/button_bg"
+        android:gravity="center" android:padding="8dp"/>
+</LinearLayout>

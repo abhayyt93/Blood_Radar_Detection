@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "862509173846",
+    "project_id": "bloodradar-9d311",
+    "storage_bucket": "bloodradar-9d311.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:862509173846:android:7c4219e5ec255b90853ff7",
+        "android_client_info": {
+          "package_name": "com.abhay.bloodradar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8NCduhRLscNsI5W8OfBafjCvnPhFVIo8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

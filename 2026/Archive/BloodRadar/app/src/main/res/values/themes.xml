@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.BloodRadar" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:fontFamily">@font/quicksand_regular</item>
+        <item name="fontFamily">@font/quicksand_regular</item>
+    </style>
+
+    <style name="Theme.BloodRadar" parent="Base.Theme.BloodRadar" />
+
+    <!-- Splash Screen Theme -->
+    <style name="SplashTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:statusBarColor">#B71C1C</item>
+    </style>
+</resources>

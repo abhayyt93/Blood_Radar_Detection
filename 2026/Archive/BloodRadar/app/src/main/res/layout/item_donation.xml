@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header: Blood Group + Status -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tvBloodGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="A+"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/quicksand_bold"/>
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="AVAILABLE"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/circle_urgency"
+                android:textColor="@color/white"
+                android:fontFamily="@font/quicksand_bold"/>
+        </LinearLayout>
+
+        <!-- User Info -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="👤 "
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Donor Name"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/quicksand_medium"/>
+        </LinearLayout>
+
+        <!-- City -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📍 "
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tvCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="City"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/quicksand_regular"/>
+        </LinearLayout>
+
+        <!-- Message -->
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I want to donate blood..."
+            android:textSize="14sp"
+            android:textColor="@color/colorText"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/quicksand_regular"/>
+
+        <!-- Action Buttons Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="4dp">
+
+            <!-- Request Number / Pending / Call Button (3 states) -->
+            <TextView
+                android:id="@+id/tvRequestNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="REQUEST NUMBER"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:background="@drawable/rounded_call_button"
+                android:padding="12dp"
+                android:layout_marginEnd="6dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/quicksand_bold"/>
+
+            <!-- Chat Button -->
+            <TextView
+                android:id="@+id/btnChat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="💬 Chat"
+                android:textSize="15sp"
+                android:textColor="@color/colorPrimary"
+                android:background="@drawable/chat_button_bg"
+                android:padding="12dp"
+                android:layout_marginStart="6dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/quicksand_bold"/>
+        </LinearLayout>
+
+        <!-- Mark as Donated Button (Only shown for owner) -->
+        <Button
+            android:id="@+id/btnMarkDonated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mark as Donated"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/colorAccent"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:fontFamily="@font/quicksand_bold"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

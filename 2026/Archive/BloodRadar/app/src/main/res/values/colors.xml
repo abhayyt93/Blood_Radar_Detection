@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Blood Theme Colors -->
+    <color name="colorPrimary">#D32F2F</color>
+    <color name="colorPrimaryDark">#C62828</color>
+    <color name="colorAccent">#E53935</color>
+    <color name="colorBackground">#FFF8F8F8</color>
+    <color name="colorText">#212121</color>
+    <color name="colorTextSecondary">#757575</color>
+    <color name="colorButton">#D32F2F</color>
+    <color name="colorButtonText">#FFFFFF</color>
+    <color name="colorEditTextBg">#F5F5F5</color>
+    <color name="colorEditTextBorder">#E0E0E0</color>
+    <color name="colorError">#FF5252</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey_light">#F5F5F5</color>
+    <color name="grey_dark">#424242</color>
+    <color name="bottom_nav_icon_selected">#FFFFFF</color>
+    <color name="bottom_nav_icon_unselected">#B3FFFFFF</color>
+    
+    <!-- Gradient Colors -->
+    <color name="red_gradient_start">#E53935</color>
+    <color name="red_gradient_center">#D32F2F</color>
+    <color name="red_gradient_end">#C62828</color>
+</resources>

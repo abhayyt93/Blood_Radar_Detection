@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <!-- Modern Toolbar with Gradient -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toolbar_bg"
+        android:elevation="4dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <!-- User Initial Circle -->
+            <FrameLayout
+                android:layout_width="48dp"
+                android:layout_height="48dp">
+
+                <TextView
+                    android:id="@+id/tvUserInitial"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/user_circle_bg"
+                    android:gravity="center"
+                    android:text="U"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:elevation="2dp"/>
+
+                <ImageView
+                    android:id="@+id/ivUserProfilePic"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:visibility="gone"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Profile Picture"/>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome back,"
+                    android:textColor="#E0FFFFFF"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/quicksand_regular"/>
+
+                <!-- User Name -->
+                <TextView
+                    android:id="@+id/tvUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:maxLines="1"
+                    android:ellipsize="end"/>
+            </LinearLayout>
+
+            <!-- Notification Bell with Badge -->
+            <FrameLayout
+                android:id="@+id/flNotification"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/ivNotification"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_notification_bell"
+                    app:tint="@color/white"
+                    android:contentDescription="Notifications" />
+
+                <TextView
+                    android:id="@+id/tvNotificationBadge"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="top|end"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/badge_background"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    tools:visibility="visible"/>
+            </FrameLayout>
+
+            <!-- Menu Button (3 dots) -->
+            <ImageView
+                android:id="@+id/ivMenu"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_more_vert"
+                android:contentDescription="Menu"
+                android:padding="12dp"
+                app:tint="@color/white"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Tab Layout with Modern Design -->
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/toolbar_bg"
+                android:elevation="4dp"
+                app:tabTextColor="#B3FFFFFF"
+                app:tabSelectedTextColor="@color/white"
+                app:tabIconTint="@color/tab_icon_color"
+                app:tabIconTintMode="src_in"
+                app:tabIndicatorColor="@color/white"
+                app:tabIndicatorHeight="4dp"
+                app:tabIndicatorFullWidth="false"
+                app:tabMode="fixed"
+                app:tabGravity="fill"
+                app:tabTextAppearance="@style/CustomTabText"
+                app:tabPaddingTop="12dp"
+                app:tabPaddingBottom="12dp"/>
+
+            <!-- ViewPager2 for Fragments -->
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <!-- Floating Action Button - Perfectly Circular -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabCreateRequest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="24dp"
+            android:src="@drawable/ic_blood_request"
+            app:tint="@color/white"
+            app:backgroundTint="@color/colorPrimary"
+            app:borderWidth="0dp"
+            app:elevation="8dp"
+            app:pressedTranslationZ="12dp"
+            app:fabSize="normal"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.App.CircularFAB"
+            android:contentDescription="Create Blood Request"/>
+    </FrameLayout>
+
+</LinearLayout>
+
